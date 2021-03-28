@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>eslemsozluk</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Train+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" 
+	rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+ 
+		margin: 0;
+		min-width: 250px;
+	  }
+	  
+	  /* Include the padding and border in an element's total width and height */
+	  * {
+		box-sizing: border-box;
+	  }
+	  
+	  /* Remove margins and padding from the list */
+	  ul {
+		margin: 0;
+		padding: 0;
+	  }
+	  
+	  /* Style the list items */
+	  ul li {
+		cursor: pointer;
+		position: relative;
+		padding: 30px 26px 30px 70px;
+		list-style-type: none;
+		background: #eee;
+		font-size: 18px;
+		transition: 0.4s;
+		
+		/* make the list items unselectable */
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	  }
+	  
+	  /* Set all odd list items to a different color (zebra-stripes) */
+	  ul li:nth-child(odd) {
+		background: #f9f9f9;
+	  }
+	  
+	  /* Darker background-color on hover */
+	  ul li:hover {
+		background: #ddd;
+	  }
+	  
+	  /* When clicked on, add a background color and strike out text */
+	  ul li.checked {
+		background: #888;
+		color: #fff;
+		text-decoration: line-through;
+	  }
+	  
+	  /* Add a "checked" mark when clicked on */
+	  ul li.checked::before {
+		content: '';
+		position: absolute;
+		border-color: #fff;
+		border-style: solid;
+		border-width: 0 2px 2px 0;
+		top: 20px;
+		left: 16px;
+		transform: rotate(45deg);
+		height: 15px;
+		width: 7px;
+	  }
+	  
+	  /* Style the close button */
+	  .close {
+		position: absolute;
+		right: 0;
+		top: 10;
+		padding: 12px 16px 12px 16px;
+	  }
+	  
+	  .close:hover {
+		background-color: hsl(39, 100%, 50%);
+		color: white;
+	  }
+	  
+	  /* Style the header */
+	  .header {
+		background-color: hsl(39, 100%, 50%);
+		padding: 30px 40px;
+		color: white;
+		text-align: center;
+	  }
+	  
+	  /* Clear floats after the header */
+	  .header:after {
+		content: "";
+		display: table;
+		clear: both;
+	  }
+	  
+	  /* Style the input */
+	  input {
+		margin: 20;
+		border: none;
+		border-radius: 10;
+		width: 95%;
+		height: 100px;
+		padding: 10px;
+		float: left;
+		font-size: 16px;
+	  }
+	  
+	  /* Style the "Add" button */
+	  .addBtn {
+		padding: 10px;
+		width: 45%;
+		background: #d9d9d9;
+		color: #555;
+		float: left;
+		text-align: left;
+		font-size: 16px;
+		cursor: pointer;
+		transition: 0.3s;
+		border-radius: 0;
+	  }
+	  
+	  .addBtn:hover {
+		background-color: #bbb;
+	  }
+	  *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+	body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 12px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  height: 42px;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+	  </style>
+
+</head>
+<body>
+
+<header class="bg-dark-blue">
+    <div class="container">
+        <nav id="navbar">
+            <h1 class="heading-small"><i class="fas fa-tree"></i>Eslem Sözlük</h1>
+
+            
+        </nav>
+    </div>
+</header>
+	<div class="kutular" style="width: 100%; margin: auto; display: flex; height: 660px; background: darkslategray; flex-direction: row; justify-content: flex-start; flex-wrap: wrap;">
+
+        <div class="ilk" style="font-family: 'Source Code Pro', monospace; text-align: center; background-color: hsl(39, 100%, 50%); width: 30%; height: 80%; margin: 50px;">
+		
+			<div id="myDIV" class="header">
+				<h2 style="margin:10px;">Entry Giriniz</h2><br>
+				<input type="text" id="myInput" placeholder="Entry' niz...">
+				<span onclick="newElement()" class="addBtn">Gönder Gitsin</span>
+			  </div></div>
+	<div class="iki" style="font-family: 'Source Code Pro', monospace; text-align: center; background-color: hsl(39, 100%, 50%); width: 50%; height: 80%; margin: 50px; ">
+			<form class="example" action="/action_page.php" style="margin:auto;max-width:300px;padding: 30px;">
+				<input type="text" placeholder="Entry Arayın..." name="search2">
+				<button type="submit"><i class="fa fa-search"></i></button>
+				
+			</form>
+			<ul id="myUL" style="padding: 7px;" > 
+				<li>kırtasiyeden ders kitabı satın almış efsane nesil
+					aralarındaki; kitapları aldığı gün ilk olarak türkçe kitabını karıştıran, okuma parçalarını okuyanlar; bugünün kitapseverleridir.</li>
+				
+			  </ul>
+			  
+			  
+       
+	<script>
+		// Create a "close" button and append it to each list item
+		var myNodelist = document.getElementsByTagName("LI");
+		var i;
+		for (i = 0; i < myNodelist.length; i++) {
+		  var span = document.createElement("SPAN");
+		  var txt = document.createTextNode("\u00D7");
+		  span.className = "close";
+		  span.appendChild(txt);
+		  myNodelist[i].appendChild(span);
+		}
+		
+		// Click on a close button to hide the current list item
+		var close = document.getElementsByClassName("close");
+		var i;
+		for (i = 0; i < close.length; i++) {
+		  close[i].onclick = function() {
+			var div = this.parentElement;
+			div.style.display = "none";
+		  }
+		}
+		
+		// Add a "checked" symbol when clicking on a list item
+		var list = document.querySelector('ul');
+		list.addEventListener('click', function(ev) {
+		  if (ev.target.tagName === 'LI') {
+			ev.target.classList.toggle('checked');
+		  }
+		}, false);
+		
+		// Create a new list item when clicking on the "Add" button
+		function newElement() {
+		  var li = document.createElement("li");
+		  var inputValue = document.getElementById("myInput").value;
+		  var t = document.createTextNode(inputValue);
+		  li.appendChild(t);
+		  if (inputValue === '') {
+			alert("Entry Girmediniz!");
+		  } else {
+			document.getElementById("myUL").appendChild(li);
+		  }
+		  document.getElementById("myInput").value = "";
+		
+		  var span = document.createElement("SPAN");
+		  var txt = document.createTextNode("\u00D7");
+		  span.className = "close";
+		  span.appendChild(txt);
+		  li.appendChild(span);
+		
+		  for (i = 0; i < close.length; i++) {
+			close[i].onclick = function() {
+			  var div = this.parentElement;
+			  div.style.display = "none";
+			}
+		  }
+		}
+		</script>
+        
+    </div>
+
+</body>
+<script src="sozluk.js"></script>
+
+</html>
